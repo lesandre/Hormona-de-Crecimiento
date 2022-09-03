@@ -1,0 +1,12 @@
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\HormonaCrecimiento.App.dominio.csproj.AssemblyReference.cache
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\HormonaCrecimiento.App.dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\HormonaCrecimiento.App.dominio.AssemblyInfoInputs.cache
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\HormonaCrecimiento.App.dominio.AssemblyInfo.cs
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\HormonaCrecimiento.App.dominio.csproj.CoreCompileInputs.cache
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\bin\Debug\net6.0\HormonaCrecimiento.App.dominio.deps.json
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\bin\Debug\net6.0\HormonaCrecimiento.App.dominio.dll
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\bin\Debug\net6.0\HormonaCrecimiento.App.dominio.pdb
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\HormonaCrecimiento.App.dominio.dll
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\refint\HormonaCrecimiento.App.dominio.dll
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\HormonaCrecimiento.App.dominio.pdb
+C:\Users\User\Hospitalización\HormonaCrecimiento.App\HormonaCrecimiento.App.dominio\obj\Debug\net6.0\ref\HormonaCrecimiento.App.dominio.dll
