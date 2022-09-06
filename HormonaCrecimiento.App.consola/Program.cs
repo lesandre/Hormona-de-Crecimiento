@@ -10,7 +10,7 @@ namespace HormonaCrecimiento.App.consola
 {
   class Program
   {
-   // private static IRepositorio _RepoPacienteNeonato = new RepositorioPacienteNeonato(new persistencia.AppContext());
+    private static IRepositorio _RepoPaciente = new RepositorioPaciente(new persistencia.AppContext());
     //private static IRepositorioMedico _RepoMedico = new RepositorioMedico(new //////persistencia.AppContext());
 
     private static void Main(string[] args)
@@ -23,7 +23,7 @@ namespace HormonaCrecimiento.App.consola
      //AddMedico();
      // AsignarMedico();
     }
-   /* private static void AddPacienteNeonato(){
+    private static void AddPaciente(){
       var paciente = new Paciente{
           Documento="666666666",
           Nombres="Andrea",
@@ -36,13 +36,13 @@ namespace HormonaCrecimiento.App.consola
           Genero= Genero.Femenino,
           FechaNacimiento=new DateTime(1985,04,05),
       };
-      _RepoPacienteNeonato.AddPacienteNeonato(paciente);
+      _RepoPacienteNeonato.AddPaciente(paciente);
 
 
 
     }
     private static void BuscarPaciente(int idPacienteNeonato){
-        var paciente=_RepoPacienteNeonato.GetPacienteNeonato(idPacienteNeonato);
+        var paciente=_RepoPaciente.GetPaciente(idPaciente);
        // Console.WriteLine("Nombre: "+paciente.Nombre+" "+paciente.Apellido+" ");
         paciente.Nombre = "pedro";
         ModificarPaciente(paciente);
@@ -50,7 +50,7 @@ namespace HormonaCrecimiento.App.consola
     }
 
     private static void VerPacientes(){
-        var pacientes = _RepoPacienteNeonato.GetAllPacientes();
+        var pacientes = _RepoPaciente.GetAllPacientes();
         foreach(var paciente in pacientes){
           Console.WriteLine("Nombre: "+paciente.Nombre+" "+paciente.Apellido+" ");
         }
@@ -63,7 +63,7 @@ namespace HormonaCrecimiento.App.consola
     }
 
     private static void EliminarPaciente(int idPaciente){
-        _RepoPacienteNeonato.DeletePacienteNeonato(idPaciente);
+        _RepoPaciente.DeletePaciente(idPaciente);
     }
     
     private static void AddMedico(){
@@ -87,7 +87,7 @@ namespace HormonaCrecimiento.App.consola
     private static void AsignarMedico(){
       var medico = _RepoPacienteNeonato.AsignarMedico(1, 5);
       consola.WriteLine(medico.Nombre);
-    }*/
+    }
 
   }
 
