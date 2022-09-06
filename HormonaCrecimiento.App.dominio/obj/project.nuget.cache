@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2L3fGtkwuBd4afxKK3Z8AwClcbvZy5VfAp5v2riRCY79iS+CqsL+Pe+AAzG17VBilNuvCD4kui5BPCCmeOKzTA==",
+  "dgSpecHash": "aR3CsL89G6s2lzPSYN5YejUN5EHm1f54OUsQ6LoII4Q46gKWLaqQMdVW+8KMHdKnX6o3J6kvHY2z+CefpYNBzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Hospitalización\\HormonaCrecimiento.App\\HormonaCrecimiento.App.dominio\\HormonaCrecimiento.App.dominio.csproj",
+  "projectFilePath": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.dominio\\HormonaCrecimiento.App.dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

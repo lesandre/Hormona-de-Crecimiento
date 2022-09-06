@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HormonaCrecimiento.App.persistencia\HormonaCrecimiento.App.persistencia.csproj" />
+    <ProjectReference Include="..\HormonaCrecimiento.App.dominio\HormonaCrecimiento.App.dominio.csproj" />
   </ItemGroup>
 
   <ItemGroup>

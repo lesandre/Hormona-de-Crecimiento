@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "HormonaCrecimiento.App.consola/1.0.0": {
         "dependencies": {
+          "HormonaCrecimiento.App.dominio": "1.0.0",
           "HormonaCrecimiento.App.persistencia": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.8"
         },

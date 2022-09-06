@@ -1857,6 +1857,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "HormonaCrecimiento.App.dominio >= 1.0.0",
       "HormonaCrecimiento.App.persistencia >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.8"
     ]
@@ -1867,11 +1868,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Hospitalización\\HormonaCrecimiento.App\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj",
+      "projectUniqueName": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj",
       "projectName": "HormonaCrecimiento.App.consola",
-      "projectPath": "C:\\Users\\User\\Hospitalización\\HormonaCrecimiento.App\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj",
+      "projectPath": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Hospitalización\\HormonaCrecimiento.App\\HormonaCrecimiento.App.consola\\obj\\",
+      "outputPath": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1886,8 +1887,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\User\\Hospitalización\\HormonaCrecimiento.App\\HormonaCrecimiento.App.persistencia\\HormonaCrecimiento.App.persistencia.csproj": {
-              "projectPath": "C:\\Users\\User\\Hospitalización\\HormonaCrecimiento.App\\HormonaCrecimiento.App.persistencia\\HormonaCrecimiento.App.persistencia.csproj"
+            "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.dominio\\HormonaCrecimiento.App.dominio.csproj": {
+              "projectPath": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.dominio\\HormonaCrecimiento.App.dominio.csproj"
+            },
+            "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.persistencia\\HormonaCrecimiento.App.persistencia.csproj": {
+              "projectPath": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.persistencia\\HormonaCrecimiento.App.persistencia.csproj"
             }
           }
         }
