@@ -10,17 +10,17 @@ namespace HormonaCrecimiento.App.consola
 {
   class Program
   {
-    private static IRepositorio _RepoPaciente = new RepositorioPaciente(new persistencia.AppContext());
-    //private static IRepositorioMedico _RepoMedico = new RepositorioMedico(new //////persistencia.AppContext());
+    private static IRepositorioPaciente _RepoPaciente = new RepositorioPaciente(new persistencia.AppContext());
+    //private static IRepositorioMedico _RepoMedico = new RepositorioMedico(new persistencia.AppContext());
 
     private static void Main(string[] args)
     {
-     // AddPaciente();
+      AddPaciente();
     // BuscarPaciente(2); 
      // VerPacientes();
      // EliminarPaciente(4);
      // Console.WriteLine("Hello, World!");
-     AddMedico();
+    // AddMedico();
      // AsignarMedico();
     }
     private static void AddPaciente(){
@@ -28,23 +28,23 @@ namespace HormonaCrecimiento.App.consola
           Documento="666666666",
           Nombres="Andrea",
           Apellidos="Abril",
-          Telefono="3030303",
+          NumeroTelefono="3030303",
           Direccion="transv 4 # 87-14 Sur",
           Latitud=9.2122222F,
           Longitud=-85.25F,
           Ciudad="Bogota",
-          Genero= Genero.Femenino,
+          Genero= TipoGenero.Femenino,
           FechaNacimiento=new DateTime(1985,04,05),
       };
-      _RepoPacienteNeonato.AddPaciente(paciente);
+      _RepoPaciente.AddPaciente(paciente);
 
 
 
     }
-    private static void BuscarPaciente(int idPacienteNeonato){
+    private static void BuscarPaciente(int idPaciente){
         var paciente=_RepoPaciente.GetPaciente(idPaciente);
        // Console.WriteLine("Nombre: "+paciente.Nombre+" "+paciente.Apellido+" ");
-        paciente.Nombre = "pedro";
+        paciente.Nombres = "pedro";
         ModificarPaciente(paciente);
 
     }
@@ -52,21 +52,21 @@ namespace HormonaCrecimiento.App.consola
     private static void VerPacientes(){
         var pacientes = _RepoPaciente.GetAllPacientes();
         foreach(var paciente in pacientes){
-          Console.WriteLine("Nombre: "+paciente.Nombre+" "+paciente.Apellido+" ");
+          Console.WriteLine("Nombre: "+paciente.Nombres+" "+paciente.Apellidos+" ");
         }
 
 
     }
 
     private static void ModificarPaciente(Paciente paciente){
-      _RepoPacienteNeonato.UpdatePacienteNeonato(paciente);
+      _RepoPaciente.UpdatePaciente(paciente);
     }
 
     private static void EliminarPaciente(int idPaciente){
         _RepoPaciente.DeletePaciente(idPaciente);
     }
     
-    private static void AddMedico(){
+    /*private static void AddMedico(){
       var medico = new Medico{
           Documento="666666666",
           Nombre="Carla",
@@ -82,11 +82,11 @@ namespace HormonaCrecimiento.App.consola
 
 
 
-    }
+    }*/
 
     private static void AsignarMedico(){
-      var medico = _RepoPacienteNeonato.AsignarMedico(1, 5);
-      consola.WriteLine(medico.Nombre);
+      var medico = _RepoPaciente.AsignarMedico(1, 5);
+      Console.WriteLine(medico.Nombres);
     }
 
   }
