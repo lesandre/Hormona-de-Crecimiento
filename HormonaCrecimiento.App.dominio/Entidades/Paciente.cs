@@ -20,6 +20,7 @@ public class Paciente:Persona
       
   public Medico? Medico{get; set;}
   public HistoriaClinica? Historia {get; set;}
+ // public List<TipoGenero> Generos{get; set;}
    public List<HormonaCrecimiento.App.dominio.PatronesCrecimiento> PatronesCrecimiento{get; set;}
   
 

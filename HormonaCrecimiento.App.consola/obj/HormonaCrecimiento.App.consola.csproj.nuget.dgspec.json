@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\HormonaCrecimiento\\hormonacrecimiento.app.consola\\HormonaCrecimiento.App.consola.csproj": {}
+    "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\HormonaCrecimiento\\hormonacrecimiento.app.consola\\HormonaCrecimiento.App.consola.csproj": {
+    "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\HormonaCrecimiento\\hormonacrecimiento.app.consola\\HormonaCrecimiento.App.consola.csproj",
+        "projectUniqueName": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj",
         "projectName": "HormonaCrecimiento.App.consola",
-        "projectPath": "C:\\Users\\User\\HormonaCrecimiento\\hormonacrecimiento.app.consola\\HormonaCrecimiento.App.consola.csproj",
+        "projectPath": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\HormonaCrecimiento.App.consola.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\HormonaCrecimiento\\hormonacrecimiento.app.consola\\obj\\",
+        "outputPath": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
