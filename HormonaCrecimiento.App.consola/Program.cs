@@ -19,8 +19,8 @@ namespace HormonaCrecimiento.App.consola
     // BuscarPaciente(2); 
      // VerPacientes();
      // EliminarPaciente(4);
-      Console.WriteLine("Hello, World!");
-     //AddMedico();
+     // Console.WriteLine("Hello, World!");
+     AddMedico();
      // AsignarMedico();
     }
     private static void AddPaciente(){
