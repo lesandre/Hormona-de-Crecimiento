@@ -34,7 +34,7 @@ namespace HormonaCrecimiento.App.consola
           Longitud=-85.25F,
           Ciudad="Bogota",
           Genero= TipoGenero.Femenino,
-          FechaNacimiento=new DateTime(1985,04,05),
+          FechaNacimiento=new DateTime(1985,04,05)
       };
       _RepoPaciente.AddPaciente(paciente);
 

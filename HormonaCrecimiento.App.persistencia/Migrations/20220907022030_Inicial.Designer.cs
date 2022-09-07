@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HormonaCrecimiento.App.persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220906205754_Inicial")]
+    [Migration("20220907022030_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,7 +51,7 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                     b.Property<DateTime?>("FechaHora")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PacientePersonaId")
+                    b.Property<int?>("PacienteId")
                         .HasColumnType("int");
 
                     b.Property<int?>("Patrones")
@@ -62,18 +62,18 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PacientePersonaId");
+                    b.HasIndex("PacienteId");
 
                     b.ToTable("PatronesCrecimiento");
                 });
 
             modelBuilder.Entity("HormonaCrecimiento.App.dominio.Persona", b =>
                 {
-                    b.Property<int>("PersonaId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersonaId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Apellidos")
                         .HasColumnType("nvarchar(max)");
@@ -94,7 +94,7 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                     b.Property<string>("NumeroTelefono")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("PersonaId");
+                    b.HasKey("Id");
 
                     b.ToTable("Personas");
 
@@ -164,7 +164,7 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("FamiliarAsignadoPersonaId")
+                    b.Property<int?>("FamiliarAsignadoId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("FechaNacimiento")
@@ -179,14 +179,14 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                     b.Property<float?>("Longitud")
                         .HasColumnType("real");
 
-                    b.Property<int?>("MedicoPersonaId")
+                    b.Property<int?>("MedicoId")
                         .HasColumnType("int");
 
-                    b.HasIndex("FamiliarAsignadoPersonaId");
+                    b.HasIndex("FamiliarAsignadoId");
 
                     b.HasIndex("HistoriaId");
 
-                    b.HasIndex("MedicoPersonaId");
+                    b.HasIndex("MedicoId");
 
                     b.HasDiscriminator().HasValue("Paciente");
                 });
@@ -195,7 +195,7 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                 {
                     b.HasOne("HormonaCrecimiento.App.dominio.Paciente", null)
                         .WithMany("PatronesCrecimiento")
-                        .HasForeignKey("PacientePersonaId");
+                        .HasForeignKey("PacienteId");
                 });
 
             modelBuilder.Entity("HormonaCrecimiento.App.dominio.SugerenciaTratamiento", b =>
@@ -209,7 +209,7 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                 {
                     b.HasOne("HormonaCrecimiento.App.dominio.FamiliarAsignado", "FamiliarAsignado")
                         .WithMany()
-                        .HasForeignKey("FamiliarAsignadoPersonaId");
+                        .HasForeignKey("FamiliarAsignadoId");
 
                     b.HasOne("HormonaCrecimiento.App.dominio.HistoriaClinica", "Historia")
                         .WithMany()
@@ -217,7 +217,7 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
 
                     b.HasOne("HormonaCrecimiento.App.dominio.Medico", "Medico")
                         .WithMany()
-                        .HasForeignKey("MedicoPersonaId");
+                        .HasForeignKey("MedicoId");
 
                     b.Navigation("FamiliarAsignado");
 

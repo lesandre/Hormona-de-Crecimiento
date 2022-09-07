@@ -26,7 +26,7 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                 name: "Personas",
                 columns: table => new
                 {
-                    PersonaId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Documento = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nombres = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -44,28 +44,28 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                     Longitud = table.Column<float>(type: "real", nullable: true),
                     Ciudad = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FechaNacimiento = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    FamiliarAsignadoPersonaId = table.Column<int>(type: "int", nullable: true),
-                    MedicoPersonaId = table.Column<int>(type: "int", nullable: true),
+                    FamiliarAsignadoId = table.Column<int>(type: "int", nullable: true),
+                    MedicoId = table.Column<int>(type: "int", nullable: true),
                     HistoriaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Personas", x => x.PersonaId);
+                    table.PrimaryKey("PK_Personas", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Personas_Historias_HistoriaId",
                         column: x => x.HistoriaId,
                         principalTable: "Historias",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Personas_Personas_FamiliarAsignadoPersonaId",
-                        column: x => x.FamiliarAsignadoPersonaId,
+                        name: "FK_Personas_Personas_FamiliarAsignadoId",
+                        column: x => x.FamiliarAsignadoId,
                         principalTable: "Personas",
-                        principalColumn: "PersonaId");
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Personas_Personas_MedicoPersonaId",
-                        column: x => x.MedicoPersonaId,
+                        name: "FK_Personas_Personas_MedicoId",
+                        column: x => x.MedicoId,
                         principalTable: "Personas",
-                        principalColumn: "PersonaId");
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -97,27 +97,27 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                     FechaHora = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Patrones = table.Column<int>(type: "int", nullable: true),
                     Valor = table.Column<float>(type: "real", nullable: true),
-                    PacientePersonaId = table.Column<int>(type: "int", nullable: true)
+                    PacienteId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PatronesCrecimiento", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PatronesCrecimiento_Personas_PacientePersonaId",
-                        column: x => x.PacientePersonaId,
+                        name: "FK_PatronesCrecimiento_Personas_PacienteId",
+                        column: x => x.PacienteId,
                         principalTable: "Personas",
-                        principalColumn: "PersonaId");
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PatronesCrecimiento_PacientePersonaId",
+                name: "IX_PatronesCrecimiento_PacienteId",
                 table: "PatronesCrecimiento",
-                column: "PacientePersonaId");
+                column: "PacienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Personas_FamiliarAsignadoPersonaId",
+                name: "IX_Personas_FamiliarAsignadoId",
                 table: "Personas",
-                column: "FamiliarAsignadoPersonaId");
+                column: "FamiliarAsignadoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Personas_HistoriaId",
@@ -125,9 +125,9 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                 column: "HistoriaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Personas_MedicoPersonaId",
+                name: "IX_Personas_MedicoId",
                 table: "Personas",
-                column: "MedicoPersonaId");
+                column: "MedicoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Sugerencias_HistoriaClinicaId",
