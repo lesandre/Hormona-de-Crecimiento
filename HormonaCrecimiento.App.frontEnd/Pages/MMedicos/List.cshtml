@@ -1,0 +1,35 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_MMedicos.IndexModel
+@{
+}
+<h1>Lista de medicos</h1>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Número Teléfono</th>
+      <th scope="col">Género</th>
+      <th scope="col">Agregar medicos<a asp-page="./Create"><span class="material-icons">person_add</span></a></th>
+      
+    </tr>
+  </thead>
+  @foreach (var medico in Model.Medicos)
+  {
+     <tbody>
+    <tr>
+      <th scope="row">@medico.Id</th>
+      <td>@medico.Nombres</td>
+      <td>@medico.Apellidos</td>
+      <td>@medico.NumeroTelefono</td>
+      <td>@medico.Genero</td>
+      
+      <td><a asp-page="./Details" asp-route-Id="@medico.Id"><span class="material-icons">description</span></a></td>
+      <td><a asp-page="./Edit" asp-route-Id="@medico.Id"><span class="material-icons">edit</span></a></td>
+      <td><a asp-page="./Delete" asp-route-Id="@medico.Id"><span class="material-icons">delete</span></a></td>
+    </tr>
+    
+  </tbody>
+  }
+</table>
