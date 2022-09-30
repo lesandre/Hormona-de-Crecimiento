@@ -1,0 +1,46 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_BDMedicos.CreateModel
+@{
+}
+
+<h2 class="text-center header text-success text-white">Ingresa los datos del Medico</h2>
+<form method="post" action="" style="width:35%;margin:0 auto;" class="text-white">
+  <div asp-validation-sumary="ModelOnly"></div>
+  <div class="form-group">
+    <label for="">Documento</label>
+    <input asp-for="Medico.Documento" placeholder="Digite el Documento del Medico" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="">Nombre</label>
+    <input asp-for="Medico.Nombres" placeholder="Digite el Nombre del Medico" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="">Apellidos</label>
+    <input asp-for="Medico.Apellidos" placeholder="Digite el Apellido del Medico" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="">Telefono</label>
+    <input asp-for="Medico.NumeroTelefono" placeholder="Digite el Número Telefonico del Medico" class="form-control" />
+  </div>
+  <div class="form-group">
+    <label for="">Género</label>
+    <select asp-for="Medico.Genero" class="form-control">
+      <option selected>Genero..</option>
+      <option value="0">Masculino</option>
+      <option value="1">Femenino</option>
+      <option value="2">Intersexual</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="">Especialidad</label>
+    <select asp-for="Medico.Especialidad" class="form-control">
+      <option selected>Especialidad..</option>
+      <option value="0">Pediatra</option>
+      <option value="1">Endocrino</option>
+
+    </select>
+  </div>  
+    <button type="submit" class="btn btn-success form-control" asp-page-handler="Save">Guardar</button>
+  
+</form>

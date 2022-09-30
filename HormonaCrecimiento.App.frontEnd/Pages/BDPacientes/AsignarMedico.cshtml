@@ -1,0 +1,41 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_BDPacientes.AsignarMedicoModel
+@{
+}
+<form action="" method="post" class="text-white">
+  <input type="hidden" asp-for=Paciente.Id>
+  <h2 class="text-center">Asignar Medico</h2>
+  <table class="table table-bordered text-white">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Número Teléfono</th>
+        <th scope="col">Género</th>
+        <th scope="col">Especilidad</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+  @foreach (var medico in Model.Medicos)
+  {
+    <tbody class="text-white">
+      <tr>
+        <th scope="row">@medico.Id</th>
+        <td>@medico.Nombres</td>
+        <td>@medico.Apellidos</td>
+        <td>@medico.NumeroTelefono</td>
+        <td>@medico.Genero</td>
+        <td>@medico.Especialidad</td>
+
+        <td><input type="checkbox" name="medicoId" value="@medico.Id" id=""></td>        
+      </tr>
+
+    </tbody>
+  }
+
+  </table>
+
+  <button type="submit" class="btn btn-primary" asp-page-handler="ToAssign">Asignar Medico</button>
+
+</form>

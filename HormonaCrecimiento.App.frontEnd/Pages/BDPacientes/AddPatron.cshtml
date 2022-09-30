@@ -1,0 +1,36 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_BDPacientes.AddPatronModel
+@{
+}
+
+
+<h2 class="text-white text-center">Patrones de Crecimiento</h2>
+<form action="" method="post" style="width:35%;margin:0 auto;" class="text-white">
+  <input type="hidden" asp-for="Paciente.Id">
+  <div class="form-group">
+    <label for="">Patron de Crecimiento</label>
+    <select asp-for="PatronesCrecimiento.Patrones " class="form-control">
+      <option selected>Patrones</option>
+        <option value="0">peso</option>
+        <option value="1">talla</option>
+        <option value="2">perimetroCefalico</option>
+        <option value="3">medidaAbdominal</option>
+    </select>
+    <div class="form-group">
+      <label for="">Valor</label>
+      <input asp-for="PatronesCrecimiento.Valor" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Fecha</label>
+      <input asp-for="PatronesCrecimiento.FechaHora" class="form-control">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" asp-page-handler="Save"> Agregar Patrones </button>
+      <a asp-page="./List">Regresar a la lista</a>
+    </div>
+  </div>
+
+
+
+
+</form>

@@ -1,0 +1,59 @@
+﻿@page
+@model HormonaCrecimiento.App.Pages_BDPacientes.CreateModel
+@{
+}
+<h2 class="text-center header text-success text-white">Ingresa los datos del paciente</h2>
+<form method="post" action="" style="width:35%;margin:0 auto;" class="text-white">
+  <div asp-validation-sumary="ModelOnly"></div>
+   <div class="form-group">
+    <label for="">Documento</label>
+    <input asp-for="Paciente.Documento" placeholder="Digite el Documento del paciente" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label for="">Nombre</label>
+    <input asp-for="Paciente.Nombres" placeholder="Digite el Nombre del paciente" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label for="">Apellidos</label>
+    <input asp-for="Paciente.Apellidos" placeholder="Digite el Apellido del paciente" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label for="">Telefono</label>
+    <input asp-for="Paciente.NumeroTelefono" placeholder="Digite el Número Telefonico del paciente" class="form-control"/>
+  </div>  
+  <div class="form-group">
+    <label for="">Género</label>
+    <select asp-for="Paciente.Genero" class="form-control">
+        <option selected>Genero..</option>
+        <option value="0">Masculino</option>
+        <option value="1">Femenino</option>
+        <option value="2">Intersexual</option>
+    </select>
+  </div> 
+  <div class="form-group">
+    <label for="">Fecha de Nacimiento</label>
+    <input asp-for="Paciente.FechaNacimiento" class="form-control"/>
+  </div>
+     
+   <div class="form-group">
+    <label for="">Dirección</label>
+    <input asp-for="Paciente.Direccion" placeholder="Digite la Dirección del paciente" class="form-control"/>
+  </div>  
+   <div class="form-group">
+    <<label for="">Latitud</label>
+    <input asp-for="Paciente.Latitud" placeholder="Digite la Latitud del paciente" class="form-control"/>
+  </div>  
+   <div class="form-group">
+    <label for="">Longitud</label>
+    <input asp-for="Paciente.Longitud" placeholder="Digite la Longitud del paciente" class="form-control"/>
+  </div>  
+   <div class="form-group">
+   <label for="">Ciudad</label>
+    <input asp-for="Paciente.Ciudad" placeholder="Digite la Ciudad del paciente" class="form-control"/>
+  </div> 
+  
+  <div class="">
+  <button type="submit" class="btn btn-primary form-control" asp-page-handler="Save">Guardar</button> 
+  </div>
+</form>
+
