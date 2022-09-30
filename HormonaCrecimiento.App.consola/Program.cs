@@ -11,17 +11,17 @@ namespace HormonaCrecimiento.App.consola
   class Program
   {
     private static IRepositorioPaciente _RepoPaciente = new RepositorioPaciente(new persistencia.AppContext());
-    //private static IRepositorioMedico _RepoMedico = new RepositorioMedico(new persistencia.AppContext());
+    private static IRepositorioMedico _RepoMedico = new RepositorioMedico(new persistencia.AppContext());
 
     private static void Main(string[] args)
     {
-      AddPaciente();
-    // BuscarPaciente(2); 
-     // VerPacientes();
+     // AddPaciente();
+     //BuscarPaciente(1); 
+      VerPacientes();
      // EliminarPaciente(4);
      // Console.WriteLine("Hello, World!");
-    // AddMedico();
-     // AsignarMedico();
+     //AddMedico();
+    //  AsignarMedico();
     }
     private static void AddPaciente(){
       var paciente = new Paciente{
@@ -43,9 +43,9 @@ namespace HormonaCrecimiento.App.consola
     }
     private static void BuscarPaciente(int idPaciente){
         var paciente=_RepoPaciente.GetPaciente(idPaciente);
-       // Console.WriteLine("Nombre: "+paciente.Nombre+" "+paciente.Apellido+" ");
-        paciente.Nombres = "pedro";
-        ModificarPaciente(paciente);
+        Console.WriteLine("Nombre: "+paciente.Nombres+" "+paciente.Apellidos+" ");
+      //  paciente.Nombres = "pedro";
+      //  ModificarPaciente(paciente);
 
     }
 
@@ -66,14 +66,14 @@ namespace HormonaCrecimiento.App.consola
         _RepoPaciente.DeletePaciente(idPaciente);
     }
     
-    /*private static void AddMedico(){
+    private static void AddMedico(){
       var medico = new Medico{
           Documento="666666666",
-          Nombre="Carla",
-          Apellido="Hernandez",
-          Telefono="454545",          
-          Genero= Genero.Femenino,
-          Especialidad = "pediatra",
+          Nombres="Carla",
+          Apellidos="Hernandez",
+          NumeroTelefono="454545",          
+          Genero= TipoGenero.Femenino,
+          Especialidad = TipoEspecialidad.Pediatra,
           Codigo="201",
           RegistroRethus="757576",
           
@@ -82,7 +82,7 @@ namespace HormonaCrecimiento.App.consola
 
 
 
-    }*/
+    }
 
     private static void AsignarMedico(){
       var medico = _RepoPaciente.AsignarMedico(1, 5);

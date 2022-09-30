@@ -41,6 +41,12 @@ button.accept-policy[b-ojmbk5totp] {
   font-size: 1rem;
   line-height: inherit;
 }
+.abs-center[b-ojmbk5totp] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
 .footer[b-ojmbk5totp] {
   background-color: black;

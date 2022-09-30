@@ -61,3 +61,7 @@ C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\obj\Debug\net6.
 C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\obj\Debug\net6.0\HormonaCrecimiento.App.frontEnd.pdb
 C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\obj\Debug\net6.0\HormonaCrecimiento.App.frontEnd.genruntimeconfig.cache
 C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\obj\Debug\net6.0\ref\HormonaCrecimiento.App.frontEnd.dll
+C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\bin\Debug\net6.0\Humanizer.dll
+C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\bin\Debug\net6.0\package-lock.json
+C:\Users\User\HormonaCrecimiento\HormonaCrecimiento.App.frontEnd\bin\Debug\net6.0\package.json

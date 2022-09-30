@@ -143,8 +143,8 @@ namespace HormonaCrecimiento.App.persistencia.Migrations
                     b.Property<string>("Codigo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Especialidad")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("Especialidad")
+                        .HasColumnType("int");
 
                     b.Property<string>("RegistroRethus")
                         .HasColumnType("nvarchar(max)");

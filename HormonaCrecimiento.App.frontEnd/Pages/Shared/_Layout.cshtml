@@ -18,7 +18,7 @@
             <div class="container">
                 <a class="navbar-brand text-white" asp-area="" asp-page="/Index">
                     <img src="~/images/logo.svg" alt="Logo de HormonaCrecimiento" width="60" height="60" />
-                    Clinica Torre Alta Tratamiento Hormona de Crecimiento</a>
+                    Clinica Torre Alta </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,13 +29,12 @@
                         <img src="~/images/logo.svg" alt="mdo" width="50" height="50" class="rounded-circle" />
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" asp-area="" asp-page="/MPacientes/List">Ver pacientes</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-page="/BDPacientes/List">Pacientes</a></li>
                         <li>
-                            <a class="dropdown-item" data-bs-toggle="modal">Ingresar
-                                Paciente</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/BDMedicos/List">Medicos</a>
                         </li>
-                        <li><a class="dropdown-item">Actualizar paciente</a></li>
-                        <li><a class="dropdown-item">Eliminar paciente</a></li>
+                        <li><a class="dropdown-item">Familiar</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-page="/BDMedicos/ListPacientes">Patrones</a></li>
                         <li>
                             <hr class="dropdown-divider" />
                         </li>
@@ -47,6 +46,7 @@
     </header>
     <div class="container-fluid">
         <main role="main" class="pb-3">
+            <h1 class="text-white text-center"  >Tratamiento Hormona de Crecimiento para Pacientes Neonatos</h1>
             @RenderBody()
         </main>
     </div>

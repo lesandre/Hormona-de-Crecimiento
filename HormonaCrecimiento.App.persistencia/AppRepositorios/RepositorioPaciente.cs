@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using HormonaCrecimiento.App.dominio;
 
 namespace HormonaCrecimiento.App.persistencia;
@@ -67,10 +68,12 @@ namespace HormonaCrecimiento.App.persistencia;
         }
         public Medico AsignarMedico(int idPaciente, int idMedico)
         {
-          var paciente = _appContext.Pacientes.FirstOrDefault(p=>p.Id==idPaciente);
+
+          var paciente = _appContext.Pacientes.FirstOrDefault(paciente=>paciente.Id==idPaciente);
+             
             if(paciente!=null)
             {
-              var medico = _appContext.Medicos.FirstOrDefault(m=>m.Id==idMedico);
+              var medico = _appContext.Medicos.FirstOrDefault(medico=>medico.Id==idMedico);
               if(medico!=null)
               {
                 paciente.Medico = medico;
@@ -78,7 +81,20 @@ namespace HormonaCrecimiento.App.persistencia;
               }
               return medico;
             }
-            return null;
+            return null;            
 
         }
+        public Medico ConsultarMedico(int idPaciente){
+              var paciente = _appContext.Pacientes.Where(paciente=>paciente.Id==idPaciente).Include(paciente=>paciente.Medico).FirstOrDefault();
+              return paciente.Medico;
+            }
+
+             public IEnumerable<PatronesCrecimiento> GetPatronPaciente(int idPaciente){
+              var paciente = _appContext.Pacientes.Where(paciente=>paciente.Id==idPaciente).Include(paciente=>paciente.PatronesCrecimiento).FirstOrDefault();
+              return paciente.PatronesCrecimiento;
+             }
+             public IEnumerable<Paciente> PacientesMedico(int idMedico){
+                return _appContext.Pacientes.Where(p=>p.Medico.Id==idMedico).ToList();
+             }
+
     }

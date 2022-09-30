@@ -14,6 +14,8 @@ namespace HormonaCrecimiento.App.persistencia;
         void DeletePaciente(int idPaciente);
         Paciente GetPaciente(int idPaciente);
         Medico AsignarMedico(int idPaciente, int idMedico);
-
+        Medico ConsultarMedico(int idPaciente);
+        IEnumerable<PatronesCrecimiento> GetPatronPaciente(int idPaciente);
+        IEnumerable<Paciente> PacientesMedico(int idMedico);
         
     }

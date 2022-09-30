@@ -16,3 +16,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+/*login*/
+.card{
+  border: none;
+  border-top: 5px solid rgb(176, 106, 252);
+  background-color:  #212042;
+  color: #57557a;
+}
+.d-flex{
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center; 
+}

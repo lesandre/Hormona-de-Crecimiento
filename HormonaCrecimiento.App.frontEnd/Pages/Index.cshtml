@@ -4,9 +4,30 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="row">
-    <div class="col-12 ">
-        <img src="~/images/logo.svg" class="img-fluid" alt="logo hormona crecimiento" >
-       
+
+
+<div class="d-flex align-items-center ">
+    <div class="flex-shrink-0">
+        
+          <img src="~/images/logo.svg"  alt="logo hormonacrecimiento">  
+        
     </div>
+    <div class="row w-100 ">
+
+        <div class="col-12 col-md-8 col-xxl-5">
+
+            <div class="card py-3 px-2">
+                <p class="text-center my-3 text-capitalize">redes sociales</p>
+                <div class="row mx-auto">
+                    <div class="col-4">
+                        <a asp-page="" asp-route-Id=""><span class="material-icons fab fa-facebook">facebook</span></a>
+                        <a asp-page="" asp-route-Id=""><span class="material-icons"></span></a>
+                        <a asp-page="" asp-route-Id=""><span class="material-icons"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
 </div>

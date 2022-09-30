@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yy7H2sN8nuc+owkzyzKf5FAxokyX5u4GQlO7+3KTt2o=",
+  "Hash": "R9PyF7ggI24MI7DvQlX+7LAcUNdhXxP2kvJ5lbcZ9QY=",
   "Source": "HormonaCrecimiento.App.frontEnd",
   "BasePath": "_content/HormonaCrecimiento.App.frontEnd",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.frontEnd\\wwwroot\\SCSS\\Custom.scss",
+      "SourceId": "HormonaCrecimiento.App.frontEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\HormonaCrecimiento\\HormonaCrecimiento.App.frontEnd\\wwwroot\\",
+      "BasePath": "_content/HormonaCrecimiento.App.frontEnd",
+      "RelativePath": "SCSS/Custom.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\SCSS\\Custom.scss"
     }
   ]
 }

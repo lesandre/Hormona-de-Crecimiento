@@ -23,7 +23,10 @@ namespace HormonaCrecimiento.App.persistencia;
        public DbSet<HistoriaClinica> Historias{get; set;} 
        public DbSet<SugerenciaTratamiento> Sugerencias{get; set;}
        
-       
+       public AppContext (DbContextOptions<AppContext> options)
+            : base(options)
+        {
+        }
       
 
 

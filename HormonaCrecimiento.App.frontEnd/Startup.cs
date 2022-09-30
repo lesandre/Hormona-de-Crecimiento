@@ -27,6 +27,18 @@ namespace HormonaCrecimiento.App.frontEnd
         {
             services.AddSingleton<IRepositorioPacienteMemoria,RepositorioPacienteMemoria>();
             services.AddSingleton<IRepositorioMedicoMemoria,RepositorioMedicoMemoria>();
+            
+            services.AddScoped<IRepositorioPaciente,RepositorioPaciente>();
+            services.AddScoped<IRepositorioMedico,RepositorioMedico>();
+            
+            
+            
+            services.AddDbContext<persistencia.AppContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString   ("HormonaCrecimientoContext")));
+
+
+
+
             services.AddRazorPages();
         }
 
